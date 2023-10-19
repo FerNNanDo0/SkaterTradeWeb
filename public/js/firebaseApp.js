@@ -114,7 +114,7 @@ async function getAnuncios() {
       item += 
         `
         <!-- linha 1 -->
-        <div class="row mb-3 text-center">
+        <div class="row mb-3 mt-3 text-center">
           <!-- produto - 1 -->
           <div class="col-4 pl-md-5 p-0">
             <a href="#" class="card-link" id="elevacao">
