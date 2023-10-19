@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background:linear-gradient(50deg, #3d3c3c, #2b2a2a); */
+    background:linear-gradient(50deg, white, white);
+    /* background-attachment: fixed; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow-x: hidden; */
+    /* width: 100%; */
+}
+* a {
+    text-decoration: none;
+}
+
+/* topo e capa */
+header {
+    /* border: 1px solid red; */
+    /* background: #a5a5a5; */
+    background:linear-gradient(50deg, #3A8C0E, #3A8C0E);
+    text-align: center;
+    height: 64px;
+}
+
+/* Barra de navegação
+-----------------------------------*/
+nav.navbar-transparente {
+    padding: 3px 0;
+    background-attachment: fixed;
+    background: linear-gradient(
+            0.25turn,
+            #3A8C0E,
+            #3A8C0E,
+            #3A8C0E
+    );
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #00fff2;
+}
+.navbar-light .navbar-toggler {
+    color: rgba(255, 255, 255, 0.856);
+    border-color: rgba(255, 255, 255, 0.877);
+    box-shadow: none;
+}
+nav ul li a i {
+    font-size:125%!important;
+}
+nav ul li a span {
+    font-size:125%!important;
+}
+
+
+/* Conteudos */
+section {
+    height: auto;
+    width: auto;
+}
+
+
+/* Rodape */
+footer i {
+    font-size: 23px;
+}
+footer #linkPrivacidade:hover {
+    color: #0011ff;
+}
+footer #linkPrivacidade {
+    color: #58cc19;
+}
+footer {
+    background-color: rgb(24, 23, 23);
+    color: white;
+}
+
+/* ***********************************
+config para diferentes tamanhos de tela */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    /* navegação */
+    nav.navbar-transparente {
+        padding: 8px 8px;
+        text-align: start;
+    }
+    .d-block {
+        display: inline-flex!important;
+    }
+    nav ul li a i {
+        font-size:100%!important;
+    }
+    nav ul li a span {
+        font-size:100%!important;
+    }
+
+    footer #linkPrivacidade {
+        font-size: 74%; 
+    }
+   
+}
+
+/* Small devices (landscap phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    /* navegação */
+    nav.navbar-transparente {
+        padding: 8px 8px;
+        text-align: start;
+    }
+    .d-block {
+        display: inline-flex!important;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

@@ -1,0 +1,18 @@
+
+firebase init
+firebase login
+firebase logout
+firebase login --reauth 
+firebase deploy --only hosting
+firebase deploy
+
+
+npm run build
+firebase serve
+
+
+// A primeira etapa é instalar o webpack pelo npm como uma dependência de desenvolvimento.
+npm i webpack webpack-cli -D
+
+// Verifique se você instalou o Firebase como dependência.
+npm i firebase
