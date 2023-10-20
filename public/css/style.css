@@ -21,7 +21,7 @@ header {
     /* background: #a5a5a5; */
     background:linear-gradient(50deg, #3A8C0E, #3A8C0E);
     text-align: center;
-    height: 64px;
+    height: 70px;
 }
 
 /* Barra de navegação
@@ -48,10 +48,10 @@ nav.navbar-transparente {
     box-shadow: none;
 }
 nav ul li a i {
-    font-size:125%!important;
+    font-size:120%!important;
 }
 nav ul li a span {
-    font-size:125%!important;
+    font-size:120%!important;
 }
 
 

@@ -1,0 +1,33 @@
+#acesso {
+    background-color: white;
+    height: auto;
+}
+#formulario {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: rgb(191, 255, 220);
+    border: 1px solid red;
+    border-radius: 6px;
+    height: 300px;
+}
+#lb-1 {
+    margin-top: 70px;
+}
+#lb-2 {
+    margin-top: 10px;
+}
+#email {
+    text-align: center;
+    margin-left: 257px;
+}
+#senha {
+    text-align: center;
+    margin-left: 257px;
+}
+#btn-log {
+    text-align: center;
+    margin-left: 267px;
+    margin-top: 12px;
+}

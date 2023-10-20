@@ -43,6 +43,24 @@ const db = getDatabase(app);
 const auth = getAuth(app);
 var userId = '';
 
+onAuthStateChanged(auth, user => {
+  // Check for user status
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
+    userId = user.uid;
+    console.log("UserId: " + userId)
+    console.log("Usuario esta logado "+ user.email+", "+user.displayName)
+    // ...
+  } else {
+    // User is signed out
+    // ...
+    //console.log("Usuario nao esta logado")
+    //logarUsuario("juliarosask8@gmail.com", "123456789");
+  }
+
+});
+
 
 function cadastrarUsuario(email, password){
   createUserWithEmailAndPassword(auth, email, password)
@@ -68,33 +86,14 @@ function logarUsuario(email, password){
       const errorCode = error.code;
       const errorMessage = error.message;
     });
-
 }
 
-onAuthStateChanged(auth, user => {
-  // Check for user status
-  if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/auth.user
-    userId = user.uid;
-    console.log("UserId: " + userId)
-    console.log("Usuario esta logado "+ user.email+", "+user.displayName)
-    // ...
-  } else {
-    // User is signed out
-    // ...
-    //console.log("Usuario nao esta logado")
-    //logarUsuario("juliarosask8@gmail.com", "123456789");
-  }
-
-});
-
-
-// lista de anuncios
-const anuncios = [];
 
 // obter dados anuncios publico do db
 async function getAnuncios() {
+  // lista de anuncios
+  const anuncios = [];
+
   // referencia dos anuncios
   const anunciosRef = ref(db, 'anuncios');
   onValue(anunciosRef, (snapshot) => {
@@ -124,12 +123,15 @@ async function getAnuncios() {
       } // for 2
     } // for 1
 
+    exibirItensNalista(anuncios)
+
+  });// onValue
+}// getAnuncios
+
+// exibir anuncios para o usuario
+function exibirItensNalista(anuncios){
     let htmlList = $('#list-itens');
     let item = '';
-
-    // anuncios.forEach( (anuncio) => {
-    //     console.log(anuncio.child("titulo").val());
-    // });
 
     // Loop para imprimir de 3 em 3 objetos
     for (let i = 0; i < anuncios.length; i += 3) {
@@ -181,9 +183,7 @@ async function getAnuncios() {
         `
       $(htmlList).html(item);
     }
-
-  });// onValue
-}// getAnuncios
+}
 
 // obter dados meus_anuncios do db
 async function getMeusAnuncios() {
