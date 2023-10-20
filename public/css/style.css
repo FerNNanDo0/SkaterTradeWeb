@@ -11,12 +11,15 @@ body {
 * a {
     text-decoration: none;
 }
+head{
+    background-color: #136500;
+}
 
 /* topo e capa */
 header {
     /* border: 1px solid red; */
     /* background: #a5a5a5; */
-    background:linear-gradient(50deg, #63CD17, #63CD17);
+    background:linear-gradient(50deg, #3A8C0E, #3A8C0E);
     text-align: center;
     height: 64px;
 }
@@ -28,9 +31,9 @@ nav.navbar-transparente {
     background-attachment: fixed;
     background: linear-gradient(
             0.25turn,
-            #63CD17,
-            #63CD17,
-            #63CD17
+            #3A8C0E,
+            #3A8C0E,
+            #3A8C0E
     );
 }
 .navbar-light .navbar-nav .nav-link {
@@ -67,6 +70,7 @@ section h5 {
 section #div-imgs img {
     border: 0.5px solid transparent;
     border-radius: 3px;
+    margin-top: 8px;
 }
 section #list-itens {
     border: 1px solid white;

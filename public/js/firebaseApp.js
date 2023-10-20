@@ -6,7 +6,9 @@ import {
 } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js'
 import {
   getAuth,
-  onAuthStateChanged
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword
 } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js'
 import {
   initializeApp
@@ -39,8 +41,35 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 //Initialize Auth and get a reference to the service
 const auth = getAuth(app);
-const userId = '';
+var userId = '';
 
+
+function cadastrarUsuario(email, password){
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+    });
+}
+
+function logarUsuario(email, password){
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+
+}
 
 onAuthStateChanged(auth, user => {
   // Check for user status
@@ -49,14 +78,17 @@ onAuthStateChanged(auth, user => {
     // https://firebase.google.com/docs/reference/js/auth.user
     userId = user.uid;
     console.log("UserId: " + userId)
+    console.log("Usuario esta logado "+ user.email+", "+user.displayName)
     // ...
   } else {
     // User is signed out
     // ...
-    console.log("Usuario nao esta logado")
+    //console.log("Usuario nao esta logado")
+    //logarUsuario("juliarosask8@gmail.com", "123456789");
   }
 
 });
+
 
 // lista de anuncios
 const anuncios = [];
@@ -114,10 +146,10 @@ async function getAnuncios() {
       item += 
         `
         <!-- linha 1 -->
-        <div class="row mb-3 mt-3 text-center">
+        <div class="row mb-3 mt-2 text-center">
           <!-- produto - 1 -->
           <div class="col-4 pl-md-5 p-0">
-            <a href="#" class="card-link" id="elevacao">
+            <a href="#" class="card-link" name="clickitem" id="elevacao">
               <div id="div-imgs">
                 <img src="${linkImgOne}" class="img-fluid">
                 <h5 class="titulo text-truncate">${nameOne.child("titulo").val()}</h5>
@@ -125,9 +157,9 @@ async function getAnuncios() {
               </div> 
             </a>
           </div>
-          <!-- produto - 2 -->
+          <!-- linha 2 -->
           <div class="col-4 pl-md-5 p-0">
-            <a href="#" class="card-link" id="elevacao">
+            <a href="#" class="card-link" name="clickitem" id="elevacao">
               <div id="div-imgs">
                 <img src="${linkImgTwo}" class="img-fluid">
                 <h5 class="titulo text-truncate">${nameTwo.child("titulo").val()}</h5>
@@ -135,9 +167,9 @@ async function getAnuncios() {
               </div>
             </a>
           </div>
-          <!-- produto - 3 -->
+          <!-- linha 3 -->
           <div class="col-4 pl-md-5 p-0">
-            <a href="#" class="card-link" id="elevacao">
+            <a href="#" class="card-link" name="clickitem" id="elevacao">
               <div id="div-imgs">
                 <img src="${linkImgThree}" class="img-fluid">
                 <h5 class="titulo text-truncate">${nameThree.child("titulo").val()}</h5> 
@@ -147,8 +179,8 @@ async function getAnuncios() {
           </div>
         </div>
         `
-        $(htmlList).html(item);
-  }
+      $(htmlList).html(item);
+    }
 
   });// onValue
 }// getAnuncios
