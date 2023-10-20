@@ -119,36 +119,30 @@ async function getAnuncios() {
           <div class="col-4 pl-md-5 p-0">
             <a href="#" class="card-link" id="elevacao">
               <div id="div-imgs">
-                <img src="${linkImgOne}" width="86" class="img-fluid">
+                <img src="${linkImgOne}" class="img-fluid">
                 <h5 class="titulo text-truncate">${nameOne.child("titulo").val()}</h5>
-                <p class="texto text-truncate">${nameOne.child("desc").val()}</p>
-                
-              </div>
-              <p class="real">R$${nameOne.child("valor").val()}</p>
+                <p class="real">${nameOne.child("valor").val()}</p>
+              </div> 
             </a>
           </div>
           <!-- produto - 2 -->
           <div class="col-4 pl-md-5 p-0">
             <a href="#" class="card-link" id="elevacao">
               <div id="div-imgs">
-                <img src="${linkImgTwo}" width="86" class="img-fluid">
+                <img src="${linkImgTwo}" class="img-fluid">
                 <h5 class="titulo text-truncate">${nameTwo.child("titulo").val()}</h5>
-                <p class="texto text-truncate">${nameTwo.child("desc").val()}</p>
-                
+                <p class="real">${nameTwo.child("valor").val()}</p>
               </div>
-              <p class="real">R$${nameTwo.child("valor").val()}</p>
             </a>
           </div>
           <!-- produto - 3 -->
           <div class="col-4 pl-md-5 p-0">
             <a href="#" class="card-link" id="elevacao">
               <div id="div-imgs">
-                <img src="${linkImgThree}" width="86" class="img-fluid">
-                <h5 class="titulo text-truncate">${nameThree.child("titulo").val()}</h5>
-                <p class="texto text-truncate">${nameThree.child("desc").val()}</p>
-                
+                <img src="${linkImgThree}" class="img-fluid">
+                <h5 class="titulo text-truncate">${nameThree.child("titulo").val()}</h5> 
+                <p class="real">${nameThree.child("valor").val()}</p>
               </div>
-              <p class="real">R$${nameThree.child("valor").val()}</p>
             </a>
           </div>
         </div>

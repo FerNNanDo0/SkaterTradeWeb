@@ -16,7 +16,7 @@ body {
 header {
     /* border: 1px solid red; */
     /* background: #a5a5a5; */
-    background:linear-gradient(50deg, #3A8C0E, #3A8C0E);
+    background:linear-gradient(50deg, #63CD17, #63CD17);
     text-align: center;
     height: 64px;
 }
@@ -28,9 +28,9 @@ nav.navbar-transparente {
     background-attachment: fixed;
     background: linear-gradient(
             0.25turn,
-            #3A8C0E,
-            #3A8C0E,
-            #3A8C0E
+            #63CD17,
+            #63CD17,
+            #63CD17
     );
 }
 .navbar-light .navbar-nav .nav-link {
@@ -56,6 +56,42 @@ nav ul li a span {
 section {
     height: auto;
     width: auto;
+}
+section p {
+    color: #136500;
+}
+section h5 {
+    color: #000000;
+    font-weight: bold;
+}
+section #div-imgs img {
+    border: 0.5px solid transparent;
+    border-radius: 3px;
+}
+section #list-itens {
+    border: 1px solid white;
+    width: auto;
+    /* display: contents; */
+}
+section #elevacao {
+    width: 90%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    position: relative;
+    left: 5%;
+    border-bottom: 0.5px solid rgba(207, 207, 207, 0.705);
+    border-radius: 6px;
+}
+section #elevacao:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.877);
+    padding: 0px;
+    transition: all .4s ease;
+    opacity: 1;
+    border-radius: 4px;
 }
 
 
@@ -97,7 +133,18 @@ config para diferentes tamanhos de tela */
     footer #linkPrivacidade {
         font-size: 74%; 
     }
-   
+
+    section img {
+        width: 90px;
+        max-height: 90px;
+        max-width: 90px;
+    }
+    section h5 {
+        font-size: small;
+    }
+    section p {
+        font-size: small;
+    }
 }
 
 /* Small devices (landscap phones, 576px and up) */
@@ -111,20 +158,60 @@ config para diferentes tamanhos de tela */
         display: inline-flex!important;
     }
 
+    section img {
+        width: 140px;
+        max-width: 140px;
+        max-width: 140px;
+    }
+    section h5 {
+        font-size: small;
+    }
+    section p {
+        font-size: small;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
-
+    section img {
+        width: 130px;
+        max-height: 130px;
+        max-width: 130px;
+    }
+    section h5 {
+        font-size: medium;
+    }
+    section p {
+        font-size: medium;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-
-
+    section img {
+        width: 260px;
+        max-height: 260px;
+        max-width: 260px;
+    }
+    section h5 {
+        font-size: large;
+    }
+    section p {
+        font-size: large;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-
+    section img {
+        width: 305px;
+        max-height: 305px;
+        max-width: 305px;
+    }
+    section h5 {
+        font-size: x-large;
+    }
+    section p {
+        font-size: x-large;
+    }
 }
