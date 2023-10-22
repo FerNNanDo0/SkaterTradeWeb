@@ -3,31 +3,131 @@
     height: auto;
 }
 #formulario {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 150px;
-    margin-right: 150px;
-    background-color: rgb(191, 255, 220);
-    border: 1px solid red;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+    /* border: 1px solid blue; */
     border-radius: 6px;
-    height: 300px;
 }
-#lb-1 {
-    margin-top: 70px;
-}
-#lb-2 {
-    margin-top: 10px;
-}
-#email {
+
+/* Logo skate is life */
+#formulario img {
     text-align: center;
-    margin-left: 257px;
+    justify-content: center;
+    position: relative;
+}
+
+/* elemento de dados*/
+#email {
+    width: 22%;
+    margin-top: 2%;
+    text-align: center;
 }
 #senha {
+    width: 22%;
+    margin-top: 0.9px;
     text-align: center;
-    margin-left: 257px;
 }
+
+/* button log */
 #btn-log {
+    margin-top: 2%;
     text-align: center;
-    margin-left: 267px;
-    margin-top: 12px;
+    width: max-content;
+}
+
+/* config button switch */
+.switch__container #span1 {
+    margin-right: 10px;
+}
+.switch__container #span2{
+    margin-left: 10px;
+}
+.switch__container {
+    text-align: center;
+    justify-content: center;
+    margin-left: 42.5%;
+    margin-top: 2%;
+    width: max-content;
+    display: flex;
+}
+.switch {
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+.switch + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+.switch--shadow + label {
+    padding: 2px;
+    width: 58px;
+    height: 28px;
+    background-color: #dddddd;
+    border-radius: 30px;
+}
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: '';
+}
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #bebebe;
+  border-radius: 30px;
+  transition: all 0.4s;
+}
+.switch--shadow + label:after {
+  width: 31px;
+  background-color: #f1f1f1;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(196, 255, 194, 0.555);
+  transition: all 0.4s;
+}
+.switch--shadow:checked + label:before {
+  background-color: #acffa4;
+}
+.switch--shadow:checked + label:after {
+  background-color: #3A8C0E;
+  transform: translateX(30px);
+}
+
+
+  
+/* ***********************************
+config para diferentes tamanhos de tela */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    
+}
+
+/* Small devices (landscap phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) { 
+   
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    
 }

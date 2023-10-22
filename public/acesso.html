@@ -102,17 +102,25 @@
   <div>
     <div class="row text-center" id="formulario">
       <div class="col-12">
-        <form action="" class="d-grid">
-          <label id="lb-1" for="email">Email</label>
-          <input type="email" placeholder="E-mail de acesso" class="w-25" id="email" name="email" autofocus required="required">
- 
-          <label id="lb-2" for="password">Senha</label>
-          <input type="password" placeholder="Senha de acesso" class="w-25" id="senha" name="senha" autofocus required="required">
-  
-          <button type="button" class="btn btn-sm btn-info" id="btn-log" style="width: 150px;">
+        <img src="./imagens/skate_is_life.jpg" class="img-fluid" width="400">
+        <div class="d-block">
+          <input type="email" placeholder="E-mail de acesso" id="email" name="email" autofocus required="required">
+          <br>
+
+          <input type="password" placeholder="Senha de acesso" id="senha" name="senha" autofocus required="required">
+          <br>
+
+          <div class="switch__container">
+            <span id="span1">Logar</span>
+            <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
+            <label for="switch-shadow"></label>
+            <span id="span2">Cadastrar</span>
+          </div>
+
+          <button type="button" class="btn btn-sm btn-info" id="btn-log" style="width: 120px;">
             <span>Entrar</span>
           </button>
-        </form>
+        </div>
       </div>
     </div>
   </div>
