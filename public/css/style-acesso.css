@@ -1,32 +1,34 @@
-#acesso {
+body #acesso {
     background-color: white;
-    height: auto;
 }
+
 #formulario {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 5%;
-    margin-right: 5%;
+
     background-color: white;
-    /* border: 1px solid blue; */
+    border: 1px solid rgb(226, 226, 226);
     border-radius: 6px;
+    height: 100%;
+
+    box-shadow: 0 2px 8px rgba(177, 177, 177, 0.877);
+    padding: 10px;
+    transition: all .4s ease;
+    opacity: 1;
 }
 
 /* Logo skate is life */
-#formulario img {
+#logo-acesso {
+    height: auto;
     text-align: center;
     justify-content: center;
     position: relative;
 }
 
-/* elemento de dados*/
+/* elementos de entrada de dados*/
 #email {
-    width: 22%;
     margin-top: 2%;
     text-align: center;
 }
 #senha {
-    width: 22%;
     margin-top: 0.9px;
     text-align: center;
 }
@@ -48,14 +50,12 @@
 .switch__container {
     text-align: center;
     justify-content: center;
-    margin-left: 42.5%;
-    margin-top: 2%;
-    width: max-content;
+    margin-top: 5%;
     display: flex;
 }
 .switch {
     position: absolute;
-    margin-left: -9999px;
+    margin-left: -8888px;
     visibility: hidden;
 }
 .switch + label {
@@ -67,8 +67,8 @@
 }
 .switch--shadow + label {
     padding: 2px;
-    width: 58px;
-    height: 28px;
+    width: 42px;
+    height: 22px;
     background-color: #dddddd;
     border-radius: 30px;
 }
@@ -88,7 +88,7 @@
   transition: all 0.4s;
 }
 .switch--shadow + label:after {
-  width: 31px;
+  width: 20px;
   background-color: #f1f1f1;
   border-radius: 100%;
   box-shadow: 0 2px 5px rgba(196, 255, 194, 0.555);
@@ -99,7 +99,7 @@
 }
 .switch--shadow:checked + label:after {
   background-color: #3A8C0E;
-  transform: translateX(30px);
+  transform: translateX(19.5px);
 }
 
 
@@ -109,25 +109,106 @@ config para diferentes tamanhos de tela */
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
-    
+    #formulario {
+        margin-top: 5.8%;
+        margin-bottom: 3.8%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    /* logo */
+   #logo-acesso {
+        width: 300px;
+    }
+    /* elementos de entrada de dados*/
+    #email {
+        width: 50%;
+    }
+    #senha {
+        width: 50%;
+    }
 }
 
 /* Small devices (landscap phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-   
+    #formulario {
+        margin-top: 5.8%;
+        margin-bottom: 3.8%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+   /* logo */
+   #logo-acesso {
+        width: 300px;
+    }
+    /* elementos de entrada de dados*/
+    #email {
+        width: 42%;
+    }
+    #senha {
+        width: 42%;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #formulario {
+        margin-top: 3.5%;
+        margin-bottom: 3.5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    } 
+    /* logo */
+    #logo-acesso {
+        width: 350px;
+    }
+    /* elementos de entrada de dados*/
+    #email {
+        width: 35%;
+    }
+    #senha {
+        width: 35%;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-    
+    #formulario {
+        margin-top: 2%;
+        margin-bottom: 1%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    /* logo */
+    #logo-acesso {
+        width: 400px;
+    }
+    /* elementos de entrada de dados*/
+    #email {
+        width: 32%;
+    }
+    #senha {
+        width: 32%;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-    
+    #formulario {
+        margin-top: 2%;
+        margin-bottom: 1%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    /* logo */
+    #logo-acesso {
+        width: 400px;
+    }
+    /* elementos de entrada de dados*/
+    #email {
+        width: 28%;
+    }
+    #senha {
+        width: 28%;
+    }
 }

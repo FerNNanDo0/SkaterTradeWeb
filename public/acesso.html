@@ -29,7 +29,7 @@
     <![endif]-->
 
   <!-- style-formulario -->
-  <link rel="stylesheet" type="text/css" href="css/style-formulario.css">
+  <link rel="stylesheet" type="text/css" href="css/style-acesso.css">
   <!-- style -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- style normalize -->
@@ -102,25 +102,33 @@
   <div>
     <div class="row text-center" id="formulario">
       <div class="col-12">
-        <img src="./imagens/skate_is_life.jpg" class="img-fluid" width="400">
-        <div class="d-block">
-          <input type="email" placeholder="E-mail de acesso" id="email" name="email" autofocus required="required">
+        <img src="./imagens/skate_is_life.jpg" class="img-fluid" id="logo-acesso">
+        <br>
+
+        <input type="email" placeholder="E-mail de acesso" id="email" autofocus required="required">
           <br>
 
-          <input type="password" placeholder="Senha de acesso" id="senha" name="senha" autofocus required="required">
-          <br>
+        <input type="password" placeholder="Senha de acesso" id="senha" autofocus required="required">
+        <br>
 
-          <div class="switch__container">
-            <span id="span1">Logar</span>
-            <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
-            <label for="switch-shadow"></label>
-            <span id="span2">Cadastrar</span>
-          </div>
+        <a href="" class="text-decoration-underline text-success">Esqueci minha senha!</a>
+        <br>
 
-          <button type="button" class="btn btn-sm btn-info" id="btn-log" style="width: 120px;">
-            <span>Entrar</span>
-          </button>
+        <div class="switch__container">
+          <span id="span1">Logar</span>
+          <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />
+          <label for="switch-shadow"></label>
+          <span id="span2">Cadastrar</span>
         </div>
+        <br>
+
+        <button type="button" class="btn btn-sm btn-success" id="btn-log" style="width: 120px;">
+          <span>Entrar</span>
+        </button>
+
+        <a href="política-de-privacidade.html" class="text-decoration-underline text-success">política de privacidade</a>
+        <br>
+
       </div>
     </div>
   </div>
